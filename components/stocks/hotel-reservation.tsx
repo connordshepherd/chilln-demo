@@ -33,7 +33,7 @@ export function HotelReservation({
     setValue(newValue);
 
     const message = {
-      role: 'system',
+      role: 'system' as const,
       content: `[User has changed nights to ${newValue} at ${hotelName}. Total cost: $${(newValue * pricePerNight).toFixed(2)}]`,
       id // This ensures the message isn't duplicated unnecessarily in the UI
     };
