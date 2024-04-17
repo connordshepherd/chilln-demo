@@ -143,15 +143,7 @@ async function submitUserMessage(content: string) {
 
   // Log the input data to the render function
 
-  console.log("Before AI processing:", {
-    model: 'gpt-3.5-turbo',
-    messages: JSON.stringify(aiState.get().messages.map(message => ({
-      role: message.role,
-      content: message.content,
-      name: message.name
-    })), null, 2),
-    context: "Providing stock purchasing capabilities and handling user queries."
-  });
+  console.log("Current AI State before processing new message:", [...aiState.get().messages]);
 
   const ui = render({
     model: 'gpt-3.5-turbo',
