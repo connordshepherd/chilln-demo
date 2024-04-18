@@ -428,8 +428,7 @@ Besides that, you can also chat with users and do some calculations if needed.`
                   hotelName,
                   streetAddress,
                   imageUrl,
-                  bookingUrl,
-                  status: 'requires_action'
+                  bookingUrl
                 }}
               />
             </BotCard>
