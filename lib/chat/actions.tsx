@@ -36,7 +36,7 @@ import { SpinnerMessage, UserMessage } from '@/components/stocks/message'
 import { Chat } from '@/lib/types'
 import { auth } from '@/auth'
 
-import { Reservation } from '@/components/stocks/hotel-reservation'
+import { HotelReservation } from '@/components/stocks/hotel-reservation'
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY || ''
