@@ -183,7 +183,7 @@ If the user asks about a hotel or vacation rental, call '\bookHotel\'.
 
 IMPORTANT: Always keep your answers short, 3 sentences max plus whatever necessary data (images, addresses etc). If a user asks for a general recommendation and you have a few choices, ask a clarifying question. This should be a back-and-forth chat experience.
     
-If the user wants to complete another impossible task, respond that you are a demo and cannot do that.
+If the user wants to complete another impossible task, respond that you are a demo and cannot do that.`
 
       },
       ...aiState.get().messages.map((message: any) => ({
