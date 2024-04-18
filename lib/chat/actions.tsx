@@ -16,7 +16,8 @@ import {
   BotMessage,
   SystemMessage,
   Stock,
-  Purchase
+  Purchase,
+  Reservation
 } from '@/components/stocks'
 
 import { z } from 'zod'
@@ -146,7 +147,7 @@ async function submitUserMessage(content: string) {
   console.log("Current AI State before processing new message:", [...aiState.get().messages]);
 
   const ui = render({
-    model: 'gpt-3.5-turbo',
+    model: 'gpt-4-turbo',
     provider: openai,
     initial: <SpinnerMessage />,
     messages: [
@@ -164,6 +165,25 @@ If the user requests purchasing a stock, call \`show_stock_purchase_ui\` to show
 If the user just wants the price, call \`show_stock_price\` to show the price.
 If you want to show trending stocks, call \`list_stocks\`.
 If you want to show events, call \`get_events\`.
+
+Another thing you can do is book hotels and vacation rentals. Recommend one of these 3 hotels or vacation rentals:
+PLUMPJACK INN
+PlumpJack Inn combines world-class style and amenities with the approachable intimacy of a mountain lodge to create a unique resort experience. Rest in comfort with plush duvets and cozy robes and slippers, and enjoy in-room wireless internet. Hotel guests also receive seasonal valet parking, use of our pool and hot tubs, ski/snowboard valet, and ski-on/ski-off access to North America's most impressive terrain at Palisades Tahoe. Guests can also use the bocce court and cruiser bikes seasonally.
+Image URL: https://www.gotahoenorth.com/wp-content/uploads/2016/10/Hero-Winter-Image-w-CC-640x440.jpg
+Booking URL: https://res.windsurfercrs.com/ibe/index.aspx?propertyID=16214&nono=1
+
+THE LODGE AT OBEXERS
+The Lodge at Obexer’s boasts beautiful modern décor and sumptuous beds outfitted with luxurious high-quality linens -- you won't want to get out of bed. Every thought has been given to make your stay a relaxing experience. Each room is equipped with a flat screen HD television, DirecTV, high-speed internet, ensuite bathroom and luxurious AMBR SPA guest toiletries.
+Image URL: https://www.thelodgeatobexers.com/sitebuilder/images/Lodge_Exterior_Cropped-900x527.jpg
+Booking URL: https://www.availabilityonline.com/availability_search.php?un=obexers1
+
+TAHOE WOODSIDE VACATION RENTALS
+Our two charming and comfortable vacation cabins and homes have fully equipped kitchens complete with all the latest amenities, including spices, organic coffee beans, and various herbal teas. Amenities include telephone, satellite TV, cozy fireplaces and high speed Internet/wifi access. Take a short walk to one of the beautiful Lake Tahoe beaches and picnic under tall pine trees. Looking for nightlife? Casino excitement and entertainment is less than two miles away, and casual to gourmet dining are all in close proximity. Enjoy summer golfing, hiking, mountain biking, boating, water sports or fishing. Winter skiing, boarding, telemarking and snow shoeing are minutes away at any of our 9 world class ski resorts. For more information please visit our website.
+Image URL: https://www.gotahoenorth.com/wp-content/uploads/2014/12/Tahoe-Woodside_2023_130-DSC_0390-Edit-640x440.jpg
+Booking URL: https://www.tahoewoodside.com/
+
+If the user asks about a hotel or vacation rental, call '\bookHotel\'.
+    
 If the user wants to sell stock, or complete another impossible task, respond that you are a demo and cannot do that.
 
 Besides that, you can also chat with users and do some calculations if needed.`
@@ -386,6 +406,34 @@ Besides that, you can also chat with users and do some calculations if needed.`
               <Events props={events} />
             </BotCard>
           )
+        // New hotel booking function
+        bookHotel: {
+          description: 'Helps user to book hotels or get information about them.',
+          parameters: z.object({
+            hotelName: z.string(),
+            nights: z.number().optional(),
+            pricePerNight: z.number(),
+            imageUrl: z.string(),
+            bookingUrl: z.string(),
+          }),
+          render: async function* ({ hotelName, nights = 1, pricePerNight, imageUrl, bookingUrl }) {
+            yield (<BotMessage content={`Finding details for ${hotelName}, please wait...`} />);
+            await sleep(1000);  // Simulate delay for fetching data
+  
+            return (
+              <BotCard>
+                <HotelReservation
+                  props={{
+                    nights,
+                    hotelName,
+                    pricePerNight,
+                    imageUrl,
+                    bookingUrl,
+                    status: 'requires_action'
+                  }}
+                />
+              </BotCard>
+            );
         }
       }
     }
