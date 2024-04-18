@@ -406,36 +406,36 @@ Besides that, you can also chat with users and do some calculations if needed.`
               <Events props={events} />
             </BotCard>
           )
-        // New hotel booking function
-        bookHotel: {
-          description: 'Helps user to book hotels or get information about them.',
-          parameters: z.object({
-            hotelName: z.string(),
-            nights: z.number().optional(),
-            pricePerNight: z.number(),
-            imageUrl: z.string(),
-            bookingUrl: z.string(),
-          }),
-          render: async function* ({ hotelName, nights = 1, pricePerNight, imageUrl, bookingUrl }) {
-            yield (<BotMessage content={`Finding details for ${hotelName}, please wait...`} />);
-            await sleep(1000);  // Simulate delay for fetching data
-  
-            return (
-              <BotCard>
-                <HotelReservation
-                  props={{
-                    nights,
-                    hotelName,
-                    pricePerNight,
-                    imageUrl,
-                    bookingUrl,
-                    status: 'requires_action'
-                  }}
-                />
-              </BotCard>
-            );
         }
-      }
+      },
+      // New hotel booking function
+      bookHotel: {
+        description: 'Helps user to book hotels or get information about them.',
+        parameters: z.object({
+          hotelName: z.string(),
+          nights: z.number().optional(),
+          pricePerNight: z.number(),
+          imageUrl: z.string(),
+          bookingUrl: z.string(),
+        }),
+        render: async function* ({ hotelName, nights = 1, pricePerNight, imageUrl, bookingUrl }) {
+          yield (<BotMessage content={`Finding details for ${hotelName}, please wait...`} />);
+          await sleep(1000);  // Simulate delay for fetching data
+
+          return (
+            <BotCard>
+              <HotelReservation
+                props={{
+                  nights,
+                  hotelName,
+                  pricePerNight,
+                  imageUrl,
+                  bookingUrl,
+                  status: 'requires_action'
+                }}
+              />
+            </BotCard>
+          );
     }
   })
 
