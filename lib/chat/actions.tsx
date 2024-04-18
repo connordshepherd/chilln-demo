@@ -180,10 +180,11 @@ Image URL: https://www.gotahoenorth.com/wp-content/uploads/2014/12/Tahoe-Woodsid
 Booking URL: https://www.tahoewoodside.com/
 
 If the user asks about a hotel or vacation rental, call '\bookHotel\'.
-    
-If the user wants to sell stock, or complete another impossible task, respond that you are a demo and cannot do that.
 
-Besides that, you can also chat with users and do some calculations if needed.`
+IMPORTANT: Always keep your answers short, 3 sentences max plus whatever necessary data (images, addresses etc). If a user asks for a general recommendation and you have a few choices, ask a clarifying question. This should be a back-and-forth chat experience.
+    
+If the user wants to complete another impossible task, respond that you are a demo and cannot do that.
+
       },
       ...aiState.get().messages.map((message: any) => ({
         role: message.role,
