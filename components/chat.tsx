@@ -46,10 +46,10 @@ export function Chat({ id, className, session, missingKeys }: ChatProps) {
 
   useEffect(() => {
     setNewChatId(id)
-  })
+  }, [id])
 
   useEffect(() => {
-    missingKeys.map(key => {
+    missingKeys.forEach(key => {
       toast.error(`Missing ${key} environment variable!`)
     })
   }, [missingKeys])
@@ -57,21 +57,21 @@ export function Chat({ id, className, session, missingKeys }: ChatProps) {
   const { messagesRef, scrollRef, visibilityRef, isAtBottom, scrollToBottom } =
     useScrollAnchor()
 
-  const backgroundImageStyle = {
-    backgroundImage: "url('https://d36tnp772eyphs.cloudfront.net/blogs/1/2020/01/Lake-Tahoe-in-winter.jpg')",
+  const chatContainerStyle = {
+    backgroundImage: messages.length === 0 ? "url('https://d36tnp772eyphs.cloudfront.net/blogs/1/2020/01/Lake-Tahoe-in-winter.jpg')" : 'none',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     width: '100%',
     height: '100%',
-    position: 'fixed'
+    position: 'fixed' as 'fixed'
   };
 
   return (
     <div
       className="group w-full overflow-auto pl-0 peer-[[data-state=open]]:lg:pl-[250px] peer-[[data-state=open]]:xl:pl-[300px]"
       ref={scrollRef}
-      style={messages.length === 0 ? backgroundImageStyle : {}}
+      style={chatContainerStyle}
     >
       <div
         className={cn('pb-[200px] pt-4 md:pt-10', className)}
