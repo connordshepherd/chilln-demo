@@ -62,7 +62,7 @@ export function Header() {
           rel="noopener noreferrer"
           className={cn(buttonVariants({ variant: 'outline' }))}
         >
-          <span className="hidden ml-2 md:flex">GoTahoeNorth</span>
+          <span className="hidden ml-2 md:flex">North Lake Tahoe</span>
         </a>
       </div>
     </header>
