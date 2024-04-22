@@ -160,7 +160,7 @@ You and the user can discuss hotels and vacation rentals and the user can book t
 
 Messages inside [] means that it's a UI element or a user event.
 
-Recommend one of these 3 hotels or vacation rentals:
+Recommend one of these 5 hotels or vacation rentals:
 PLUMPJACK INN
 PlumpJack Inn combines world-class style and amenities with the approachable intimacy of a mountain lodge to create a unique resort experience. Rest in comfort with plush duvets and cozy robes and slippers, and enjoy in-room wireless internet. Hotel guests also receive seasonal valet parking, use of our pool and hot tubs, ski/snowboard valet, and ski-on/ski-off access to North America's most impressive terrain at Palisades Tahoe. Guests can also use the bocce court and cruiser bikes seasonally.
 Street Address: 1920 Olympic Vly Rd, Olympic Valley, CA 96146 (Located inside Palisades Tahoe)
@@ -178,6 +178,18 @@ Our two charming and comfortable vacation cabins and homes have fully equipped k
 Street Address: On Old Brockway golf course, Tahoe Vista, CA 96148
 Image URL: https://www.gotahoenorth.com/wp-content/uploads/2014/12/Tahoe-Woodside_2023_130-DSC_0390-Edit-640x440.jpg
 Booking URL: https://www.tahoewoodside.com/
+
+TAHOE MARINA LODGE
+A unique lakeside condominium resort located conveniently in Tahoe City, California, is a perfect place to enjoy the local atmosphere. Your accommodations are within walking distance of the fine restaurants, a movie theater, and a variety of interesting shops in Tahoe City. Fantastic lakeviews. We feature warmly appointed one and two bedroom condominiums. Our garden view units accommodate four people with a king or queen bed and queen sofa bed. The two bedroom/two bath accommodates six people with king or queen bed, queen or two twins and queen sofa bed. The units are completely furnished from dishes to linens, everything you need for a comfortable, care-free stay at Lake Tahoe.
+Street Address: 270 North Lake, Tahoe City, CA 96145
+Image URL: https://www.tahoeml.com/wp-content/uploads/marina/2016/04/TML_Garden_Iris_1024.jpg
+Booking URL: http://www.tahoeml.com/
+
+CEDAR GLEN LODGE
+Cedar Glen Lodge is an Eco-Friendly Award-Winning Lodge in beautiful North Lake Tahoe. It features a wine bar, seasonal heated pool, hot tub, sauna, putting green, fire-pit, sandy beach across the street, Tesla and Universal EV charging stations and more. Pet friendly!
+Street Address: 6589 North Lake Boulevard, Tahoe Vista, CA 96148
+Image URL: https://www.tahoecedarglen.com/wp-content/uploads/2015/07/Cedar-Glen-Lodge-Front.jpg
+Booking URL: https://www.tahoecedarglen.com/
 
 If the user asks about a hotel or vacation rental, call '\bookHotel\'.
 
