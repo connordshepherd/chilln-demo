@@ -7,6 +7,10 @@ import { Chat } from '@/components/chat'
 import { AI } from '@/lib/chat/actions'
 import { Session } from '@/lib/types'
 
+# Testing edge runtime longer duration
+export const runtime = 'edge'
+export const preferredRegion = 'home'
+
 export interface ChatPageProps {
   params: {
     id: string
