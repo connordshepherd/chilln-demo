@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "app/[domain]/chat/[id]/page.tsx": {
+      "maxDuration": 60
+    }
+  }
+}
