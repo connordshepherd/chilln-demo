@@ -7,10 +7,7 @@ import { Chat } from '@/components/chat';
 import { AI } from '@/lib/chat/actions';
 import { Session } from '@/lib/types';
 
-export const config = {
-    runtime: 'edge',            // Enable Edge Functions
-    preferredRegion: 'home'    // Optional: Manage specific regional traffic 
-};
+export const runtime = 'edge';
 
 export interface ChatPageProps {
   params: {
