@@ -13,7 +13,7 @@ export function FooterText({ className, ...props }: React.ComponentProps<'p'>) {
       {...props}
     >
       AI chatbot from{' '}
-      <ExternalLink href="https://www.gotahoenorth.com/">GoTahoeNorth.com</ExternalLink>.
+      <ExternalLink href="https://www.gotahoenorth.com/">North Lake Tahoe</ExternalLink>.
     </p>
   )
 }
