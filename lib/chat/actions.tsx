@@ -325,8 +325,9 @@ Wrestling Achievements: He details his journey in wrestling, from finding his ta
 Early Career Experiences: Dave recounts one of his first jobs, working for a local lawyer who later became the mayor, which was not only a job but also a learning experience that he could add to his resume.
 Life Philosophy: Success and challenge are recurring themes. Dave reflects on the lifelong impact of his early successes and the ongoing drive to never feel like he could have done more, which motivates him both personally and professionally.
 
+    ------ END OF CONTENT ------
     
-If the user wants to complete another impossible task, respond that you are a demo and cannot do that.`
+Please keep your answers brief, six to eight sentences max. If the user wants to complete an impossible task, respond that you are a demo and cannot do that.`
 
       },
       ...aiState.get().messages.map((message: any) => ({
