@@ -36,14 +36,14 @@ export function ChatPanel({
 
   const exampleMessages = [
     {
-      heading: 'What are some',
-      subheading: 'hotel options in North Lake Tahoe?',
-      message: `What are some hotel options in North Lake Tahoe?`
+      heading: 'What type',
+      subheading: 'of franchisee is Chill-N looking for?',
+      message: `What type of franchisee is Chill-N looking for?`
     },
     {
-      heading: 'What is a',
-      subheading: 'great place for wine in Tahoe?',
-      message: 'What is a great place for wine in Tahoe?'
+      heading: 'What advantage',
+      subheading: 'does our tech give to franchisees?',
+      message: 'What advantage does our tech give to franchisees?'
     }
   ]
 
