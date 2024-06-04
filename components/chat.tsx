@@ -58,7 +58,7 @@ export function Chat({ id, className, session, missingKeys }: ChatProps) {
     useScrollAnchor()
 
   const chatContainerStyle = {
-    backgroundImage: messages.length === 0 ? "url('https://d36tnp772eyphs.cloudfront.net/blogs/1/2020/01/Lake-Tahoe-in-winter.jpg')" : 'none',
+    backgroundImage: messages.length === 0 ? "url('https://nmgprod.s3.amazonaws.com/media/files/51/bb/51bb708217cf7d4a47375ce253d9e287/cover_image_1673461365.jpg.760x400_q85_crop_upscale.jpg')" : 'none',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
