@@ -58,11 +58,11 @@ export function Header() {
       <div className="flex items-center justify-end space-x-2">
         <a
           target="_blank"
-          href="https://gotahoenorth.com/"
+          href="https://www.chillnicecream.com/"
           rel="noopener noreferrer"
           className={cn(buttonVariants({ variant: 'outline' }))}
         >
-          <span className="hidden ml-2 md:flex">North Lake Tahoe</span>
+          <span className="hidden ml-2 md:flex">Chill-N</span>
         </a>
       </div>
     </header>
