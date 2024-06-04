@@ -24,7 +24,7 @@ export function EmptyScreen() {
     <div className="mx-auto max-w-2xl px-4">
       <div className="flex flex-col gap-2 rounded-lg border bg-background p-8">
         <h1 className="text-lg font-semibold">
-          Welcome to the North Lake Tahoe AI Chatbot!
+          Welcome to the Chill-N Franchise Assistant!
         </h1>
         <p className="leading-normal text-muted-foreground">
           This is an AI chatbot built with{' '}
