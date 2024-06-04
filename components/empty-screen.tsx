@@ -28,7 +28,7 @@ export function EmptyScreen() {
         </h1>
         <p className="leading-normal text-muted-foreground">
           This is an AI chatbot built with{' '}
-          <ExternalLink href="https://gotahoenorth.com/">GoTahoeNorth.com</ExternalLink> to help you find the best of things to do, places to eat, and places to stay in beautiful North Lake Tahoe.
+          <ExternalLink href="https://www.chillnicecream.com/">Chill-N Nitrogen Ice Cream</ExternalLink> to answer your questions about opening a Chill-N franchise.
         </p>
       </div>
     </div>
